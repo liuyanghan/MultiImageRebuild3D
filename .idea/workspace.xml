@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="ImageBasedModellingEdu" targetName="features" />
+      <config projectName="ImageBasedModellingEdu" targetName="util" />
+      <config projectName="ImageBasedModellingEdu" targetName="sfm" />
+      <config projectName="ImageBasedModellingEdu" targetName="task2_test_ba" />
+      <config projectName="ImageBasedModellingEdu" targetName="task2_test_math_basic" />
+      <config projectName="ImageBasedModellingEdu" targetName="task1_test_features" />
+      <config projectName="ImageBasedModellingEdu" targetName="task2_test_p3p" />
+      <config projectName="ImageBasedModellingEdu" targetName="task2_test_homography_ransac" />
+      <config projectName="ImageBasedModellingEdu" targetName="task1_test_matching" />
+      <config projectName="ImageBasedModellingEdu" targetName="task2_test_jacobian" />
+      <config projectName="ImageBasedModellingEdu" targetName="task2_test_fundamental_8_point" />
+      <config projectName="ImageBasedModellingEdu" targetName="task2_test_triangle" />
+      <config projectName="ImageBasedModellingEdu" targetName="core" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2676baa4-d72c-4f51-b2a8-305149c9dd01" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/sift.cc" beforeDir="false" afterPath="$PROJECT_DIR$/features/sift.cc" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="bundle_adjustment.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sfm/bundle_adjustment.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1605">
+              <caret line="107" column="39" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sift.cc" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/features/sift.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1446">
+              <caret line="412" column="49" lean-forward="true" selection-start-line="410" selection-start-column="14" selection-end-line="412" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class2_test_fundamental_8_point.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/task2/class2_test_fundamental_8_point.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1905">
+              <caret line="127" column="69" selection-start-line="127" selection-start-column="69" selection-end-line="127" selection-end-column="69" />
+              <folding>
+                <element signature="e#2081#2109#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sift.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/sift.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1935">
+              <caret line="129" column="14" selection-start-line="129" selection-start-column="14" selection-end-line="129" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ba_conjugate_gradient.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sfm/ba_conjugate_gradient.h">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="class2_test_p3p.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/task2/class2_test_p3p.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class1_test_features.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/task1/class1_test_features.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="46" column="29" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="29" />
+              <folding>
+                <element signature="e#277#296#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class1_test_matching.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/task1/class1_test_matching.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-173" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class2_test_jacobian.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/task2/class2_test_jacobian.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2835">
+              <caret line="189" selection-start-line="189" selection-end-line="189" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class2_test_fundamental_ransac.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/task2/class2_test_fundamental_ransac.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>namespace</find>
+      <find>sift_descr</find>
+      <find>trian</find>
+      <find>mve</find>
+      <find>is_consis</find>
+      <find>dogs</find>
+      <find>si</find>
+      <find>extrema_detection</find>
+      <find>row</find>
+      <find>fill</find>
+      <find>analytic_jacobian_entries</find>
+      <find>ja</find>
+      <find>analytic_jacobian</find>
+      <find>generate_grad_ori_images</find>
+      <find>base_blur_sigma</find>
+      <find>keypoint_relative_scale</find>
+      <find>orientation_assignment</find>
+      <find>orientation_assignment</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>core</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/core/bundle.cc" />
+        <option value="$PROJECT_DIR$/core/bundle_io.h" />
+        <option value="$PROJECT_DIR$/core/camera.cc" />
+        <option value="$PROJECT_DIR$/core/bundle_io.cc" />
+        <option value="$PROJECT_DIR$/core/image_exif.h" />
+        <option value="$PROJECT_DIR$/core/image_exif.cc" />
+        <option value="$PROJECT_DIR$/core/image_base.h" />
+        <option value="$PROJECT_DIR$/core/image.h" />
+        <option value="$PROJECT_DIR$/core/image_io.h" />
+        <option value="$PROJECT_DIR$/core/image_tools.h" />
+        <option value="$PROJECT_DIR$/core/image_tools.cc" />
+        <option value="$PROJECT_DIR$/core/image_io.cc" />
+        <option value="$PROJECT_DIR$/core/view.h" />
+        <option value="$PROJECT_DIR$/core/scene.h" />
+        <option value="$PROJECT_DIR$/core/view.cc" />
+        <option value="$PROJECT_DIR$/core/scene.cc" />
+        <option value="$PROJECT_DIR$/core/image_drawing.h" />
+        <option value="$PROJECT_DIR$/features/surf.h" />
+        <option value="$PROJECT_DIR$/features/surf.cc" />
+        <option value="$PROJECT_DIR$/sfm/feature_set.h" />
+        <option value="$PROJECT_DIR$/sfm/bundler_common.h" />
+        <option value="$PROJECT_DIR$/sfm/feature_set.cc" />
+        <option value="$PROJECT_DIR$/examples/visualizer.h" />
+        <option value="$PROJECT_DIR$/examples/visualizer.cc" />
+        <option value="$PROJECT_DIR$/sfm/ransac_fundamental.cc" />
+        <option value="$PROJECT_DIR$/examples/class2_test_homography.cc" />
+        <option value="$PROJECT_DIR$/sfm/extract_focal_length.h" />
+        <option value="$PROJECT_DIR$/sfm/extract_focal_length.cc" />
+        <option value="$PROJECT_DIR$/sfm/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/examples/class2_test_bundle_adjustment.cc" />
+        <option value="$PROJECT_DIR$/examples/class1_test_matching.cc" />
+        <option value="$PROJECT_DIR$/examples/class1_test_features.cc" />
+        <option value="$PROJECT_DIR$/examples/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/examples/task1/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/features/sift.h" />
+        <option value="$PROJECT_DIR$/features/matching.h" />
+        <option value="$PROJECT_DIR$/examples/task2/class2_test_8point.cpp" />
+        <option value="$PROJECT_DIR$/examples/task2/class2_test_homography.cc" />
+        <option value="$PROJECT_DIR$/examples/task2/class2_test_8point.cc" />
+        <option value="$PROJECT_DIR$/math/matrix.h" />
+        <option value="$PROJECT_DIR$/examples/task2/task2_test_math_basic.cc" />
+        <option value="$PROJECT_DIR$/examples/task2/class2_test_p3p.cc" />
+        <option value="$PROJECT_DIR$/sfm/fundamental.cc" />
+        <option value="$PROJECT_DIR$/examples/task2/class2_test_fundamental_8_point.cc" />
+        <option value="$PROJECT_DIR$/examples/task2/class2_test_triangle.cc" />
+        <option value="$PROJECT_DIR$/sfm/bundle_adjustment.h" />
+        <option value="$PROJECT_DIR$/sfm/bundle_adjustment.cc" />
+        <option value="$PROJECT_DIR$/examples/task2/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/examples/task2/class2_test_bundle_adjustment.cc" />
+        <option value="$PROJECT_DIR$/examples/task2/class2_test_jacobian.cc" />
+        <option value="$PROJECT_DIR$/features/sift.cc" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="24" />
+    <option name="width" value="1404" />
+    <option name="height" value="832" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ImageBasedModellingEdu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageBasedModellingEdu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageBasedModellingEdu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageBasedModellingEdu" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageBasedModellingEdu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageBasedModellingEdu" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="task1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageBasedModellingEdu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageBasedModellingEdu" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="task2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageBasedModellingEdu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageBasedModellingEdu" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageBasedModellingEdu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageBasedModellingEdu" type="462c0819:PsiDirectoryNode" />
+              <item name="math" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageBasedModellingEdu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageBasedModellingEdu" type="462c0819:PsiDirectoryNode" />
+              <item name="sfm" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="directory" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/caoqi/Documents/ImageBasedModellingEdu/sfm/ransac_fundamental.cc&#10;core&#9;RUN_CONFIGURATION&#9;core" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.task1_test_matching">
+    <configuration name="features" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="features" CONFIG_NAME="Debug" />
+    <configuration name="sfm" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="sfm" CONFIG_NAME="Debug" />
+    <configuration name="task1_test_features" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./examples/data/kxm1.jpg ./examples/data/kxm2.jpg" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task1_test_matching" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task1_test_matching" />
+    <configuration name="task1_test_matching" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./examples/data/kxm1.jpg ./examples/data/kxm2.jpg" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task1_test_matching" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task1_test_matching" />
+    <configuration name="task2_test_ba" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./examples/data/sequence/IMG_0191.JPG ./examples/data/sequence/IMG_0192.JPG" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task2_test_ba" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task2_test_fundamental_8_point" />
+    <configuration name="task2_test_fundamental_8_point" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./examples/data/sequence/IMG_0191.JPG ./examples/data/sequence/IMG_0192.JPG" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task2_test_fundamental_8_point" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task2_test_fundamental_8_point" />
+    <configuration name="task2_test_homography_ransac" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task2_test_homography_ransac" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task2_test_math_basic" />
+    <configuration name="task2_test_jacobian" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task2_test_jacobian" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task2_test_jacobian" />
+    <configuration name="task2_test_math_basic" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task2_test_math_basic" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task2_test_math_basic" />
+    <configuration name="task2_test_p3p" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task2_test_p3p" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task2_test_triangle" />
+    <configuration name="task2_test_triangle" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task2_test_triangle" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task2_test_triangle" />
+    <configuration name="util" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all" />
+    <list>
+      <item itemvalue="Application.task1_test_features" />
+      <item itemvalue="Application.task1_test_matching" />
+      <item itemvalue="Application.task2_test_ba" />
+      <item itemvalue="Application.task2_test_fundamental_8_point" />
+      <item itemvalue="Application.task2_test_homography_ransac" />
+      <item itemvalue="Application.task2_test_jacobian" />
+      <item itemvalue="Application.task2_test_math_basic" />
+      <item itemvalue="Application.task2_test_p3p" />
+      <item itemvalue="Application.task2_test_triangle" />
+      <item itemvalue="Application.features" />
+      <item itemvalue="Application.sfm" />
+      <item itemvalue="Application.util" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2676baa4-d72c-4f51-b2a8-305149c9dd01" name="Default" comment="" />
+      <created>1535035787316</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1535035787316</updated>
+      <workItem from="1535035788894" duration="8292000" />
+      <workItem from="1535112821722" duration="594000" />
+      <workItem from="1535120254053" duration="9197000" />
+      <workItem from="1535169065716" duration="3031000" />
+      <workItem from="1535174932259" duration="22093000" />
+      <workItem from="1535269078487" duration="16000" />
+      <workItem from="1535269106471" duration="19142000" />
+      <workItem from="1535386393795" duration="13781000" />
+      <workItem from="1535469568805" duration="1044000" />
+      <workItem from="1535537656059" duration="10971000" />
+      <workItem from="1535589993390" duration="5586000" />
+      <workItem from="1535605915927" duration="12880000" />
+      <workItem from="1535640619040" duration="6768000" />
+      <workItem from="1535704138501" duration="2034000" />
+      <workItem from="1535720105331" duration="10389000" />
+      <workItem from="1535789197123" duration="2259000" />
+      <workItem from="1535791597558" duration="412000" />
+      <workItem from="1535792373399" duration="1056000" />
+      <workItem from="1535793591622" duration="113000" />
+    </task>
+    <task id="LOCAL-00001" summary="fist time">
+      <created>1535793272571</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1535793272571</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="129658000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="24" width="1404" height="832" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23433049" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" visible="true" weight="0.30211082" />
+      <window_info anchor="bottom" id="CMake" order="7" weight="0.32793522" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27836412" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.33905014" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fist time" />
+    <option name="LAST_COMMIT_MESSAGE" value="fist time" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/features/sift.cc</url>
+          <line>262</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/examples/task2/class2_test_bundle_adjustment.cc</url>
+          <line>299</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/examples/task2/class2_test_fundamental_8_point.cc</url>
+          <line>123</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/examples/task2/class2_test_fundamental_8_point.cc</url>
+          <line>108</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/examples/task2/class2_test_bundle_adjustment.cc</url>
+          <line>434</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/examples/task2/class2_test_jacobian.cc</url>
+          <line>188</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/examples/task2/class2_test_jacobian.cc</url>
+          <line>209</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="40" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="15" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/image_tools.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9840">
+          <caret line="656" column="30" selection-start-line="656" selection-start-column="30" selection-end-line="656" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/exhaustive_matching.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/exhaustive_matching.cc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/matching.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="691">
+          <caret line="68" column="47" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/matching.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="161" column="82" selection-start-line="161" selection-start-column="82" selection-end-line="161" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/homography.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/image_exif.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="186" selection-start-line="186" selection-end-line="186" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/data/kxm1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/task1/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/task1/visualizer.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/ransac_fundamental.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/correspondence.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/extract_focal_length.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/extract_focal_length.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/math/vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/triangulate.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/math/matrix_svd.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="880" selection-start-line="880" selection-end-line="880" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/task2/visualizer.cc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/numeric">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="206" selection-start-line="206" selection-end-line="206" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/camera_pose.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/pose_p3p.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-288" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/feature_set.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/math/matrix.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="232" selection-start-line="232" selection-end-line="232" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/fundamental.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/ba_linear_solver.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2100">
+          <caret line="140" column="14" selection-start-line="140" selection-start-column="14" selection-end-line="140" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/ransac_pose_p3p.cc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/ransac_homography.cc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/triangulate.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="74" selection-start-line="22" selection-start-column="3" selection-end-line="39" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/homography.cc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/pose_p3p.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-179" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/bundle_adjustment.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1635">
+          <caret line="109" column="28" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/task2/task2_test_math_basic.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/ransac_fundamental.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="88" column="21" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/fundamental.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="849">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/task2/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/ba_types.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/task2/class2_test_triangle.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/task2/class2_test_bundle_adjustment.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6615">
+          <caret line="441" selection-start-line="441" selection-end-line="441" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#3889#4300#0" />
+            <element signature="e#4303#6835#0" />
+            <element signature="e#6838#7973#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/ba_conjugate_gradient.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sfm/bundle_adjustment.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1605">
+          <caret line="107" column="39" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/sift.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1935">
+          <caret line="129" column="14" selection-start-line="129" selection-start-column="14" selection-end-line="129" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/task2/class2_test_fundamental_8_point.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1905">
+          <caret line="127" column="69" selection-start-line="127" selection-start-column="69" selection-end-line="127" selection-end-column="69" />
+          <folding>
+            <element signature="e#2081#2109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/task2/class2_test_jacobian.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2835">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/task2/class2_test_fundamental_ransac.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/task2/class2_test_p3p.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/task1/class1_test_features.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="46" column="29" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="29" />
+          <folding>
+            <element signature="e#277#296#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/task1/class1_test_matching.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/sift.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1446">
+          <caret line="412" column="49" lean-forward="true" selection-start-line="410" selection-start-column="14" selection-end-line="412" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
