@@ -88,10 +88,15 @@ main (int argc, char** argv)
         sift_drawing, features::Visualizer::RADIUS_BOX_ORIENTATION);
 
     /* 保存图像文件名 */
-    std::string sift_out_fname = "./tmp/" + util::fs::replace_extension
-        (util::fs::basename(image_filename), "sift.png");
+	std::cout << "Number of feature point: " << sift_descr.size() << std::endl;
+    //std::string sift_out_fname = "./tmp/" + util::fs::replace_extension
+        //(util::fs::basename(image_filename), "sift.png");
+
+	std::string sift_out_fname = "sift2.png";
     std::cout << "保存图像: " << sift_out_fname << std::endl;
+	std::cout << "hanliuyang**************1111*******: "<<std::endl;
     core::image::save_file(sift_image, sift_out_fname);
+	std::cout << "hanliuyang*********************: "<<std::endl;
 
     return 0;
 }

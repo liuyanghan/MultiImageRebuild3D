@@ -2,28 +2,30 @@ project(core)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "-fPIC")
 
+set(Third_Party_Path "../third_party")
 
 # find linpng
-find_package(PNG REQUIRED)
-if(PNG_FOUND)
-    message("PNG found: ${PNG_LIBRARIES}")
-    include_directories(${PNG_INCLUDE_DIRS})
-    add_definitions(${PNG_DEFINITIONS})
-endif()
+#find_package(PNG REQUIRED)
+#if(PNG_FOUND)
+#    message("PNG found: ${PNG_LIBRARIES}")
+#    include_directories(${PNG_INCLUDE_DIRS})
+#    add_definitions(${PNG_DEFINITIONS})
+#endif()
+include_directories(${Third_Party_Path}/include)
 
 # find libjpeg
-find_package(JPEG REQUIRED)
-if(JPEG_FOUND)
-    message("JPEG found: ${JPEG_LIBRARIES}")
-    include_directories(${JPEG_INCLUDE_DIR})
-endif()
+#find_package(JPEG REQUIRED)
+#if(JPEG_FOUND)
+#    message("JPEG found: ${JPEG_LIBRARIES}")
+#    include_directories(${JPEG_INCLUDE_DIR})
+#endif()
 
 # find libtiff
-find_package(TIFF REQUIRED)
-if(TIFF_FOUND)
-    message("TIFF found: ${TIFF_LIBRARIES}")
-    include_directories(${TIFF_INCLUDE_DIR})
-endif()
+#find_package(TIFF REQUIRED)
+#if(TIFF_FOUND)
+#    message("TIFF found: ${TIFF_LIBRARIES}")
+#    include_directories(${TIFF_INCLUDE_DIR})
+#endif()
 
 include_directories("..")
 set(HEADERS
@@ -52,6 +54,7 @@ set(SOURCE_FILES
         scene.cc
         view.cc
         )
-add_library(core ${HEADERS} ${SOURCE_FILES})
-target_link_libraries(core util ${PNG_LIBRARIES} ${JPEG_LIBRARIES} ${TIFF_LIBRARIES})
+add_library(core ${HEADERS} ${SOURCE_FILES} ${Third_Party_Path}/lib)
+#target_link_libraries(core util ${PNG_LIBRARIES} ${JPEG_LIBRARIES} ${TIFF_LIBRARIES})
+target_link_libraries(core util libpng12.so libjpeg.so libtiff.so)
 
