@@ -3,6 +3,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "-fPIC")
 
 set(Third_Party_Path "../third_party")
+include_directories(${Third_Party_Path}/include)
 
 # find linpng
 #find_package(PNG REQUIRED)
@@ -11,7 +12,6 @@ set(Third_Party_Path "../third_party")
 #    include_directories(${PNG_INCLUDE_DIRS})
 #    add_definitions(${PNG_DEFINITIONS})
 #endif()
-include_directories(${Third_Party_Path}/include)
 
 # find libjpeg
 #find_package(JPEG REQUIRED)
