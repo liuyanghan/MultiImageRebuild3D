@@ -45,7 +45,15 @@ Sift::Sift (Options const& options)
 	{\
 		for (int j = 0; j < this->options.num_samples_per_octave + 3; ++j){\
 			byteImg = core::image::float_to_byte_image(this->octaves[i].img[j]);\
-			sift_out_fname = "../../../tmp/"+std::to_string(i)+std::to_string(j)+".png";\
+			sift_out_fname = "../../../tmp/img/"+std::to_string(i)+std::to_string(j)+".png";\
+			core::image::save_file(byteImg, sift_out_fname);\
+		}\
+	}\
+	for (int i = 0; i < this->octaves.size(); i++)\
+	{\
+		for (int j = 0; j < this->options.num_samples_per_octave + 2; ++j){\
+			byteImg = core::image::float_to_byte_image(this->octaves[i].dog[j]);\
+			sift_out_fname = "../../../tmp/dog/"+std::to_string(i)+std::to_string(j)+".png";\
 			core::image::save_file(byteImg, sift_out_fname);\
 		}\
 	}\

@@ -58,6 +58,8 @@ main (int argc, char** argv)
         features::Sift::Options sift_options;
         sift_options.verbose_output = true;
         sift_options.debug_output = true;
+
+	//若要打印该信息，需要在./tmp目录下分别建立dog和img文件夹
 	sift_options.debug_output_han = (argv[2] == NULL ? false : true);
         features::Sift sift(sift_options);
         sift.set_image(image);
