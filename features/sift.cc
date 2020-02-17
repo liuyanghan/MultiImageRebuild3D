@@ -57,6 +57,15 @@ Sift::process (void)
     }
     timer.reset();
     this->create_octaves();
+
+    if (this->options.debug_output_han){
+	for (int i = 0; i < this->octaves.size(); i++){
+		int a = this->octaves[i].img[0]->width();
+		int b = this->octaves[i].img[0]->height();
+		std::cout << "width: " << a << "    |   hight: " << b << std::endl;
+	}
+     }
+
     if (this->options.debug_output)
     {
         std::cout << "SIFT: Creating octaves took "
@@ -143,6 +152,9 @@ Sift::set_image (core::ByteImage::ConstPtr img)
         this->orig = core::image::desaturate<float>
             (this->orig, core::image::DESATURATE_AVERAGE);
     }
+    std::cout << "imageInfo:   width(" << this->orig->width() 
+              << ")   hight(" << this->orig->height() 
+              << ")   channels(" << img->channels()<< ")"<<std::endl;
 }
 
 /* ---------------------------------------------------------------- */
@@ -202,6 +214,10 @@ Sift::create_octaves (void)
     {
         //std::cout << "Creating octave " << i << "..." << std::endl;
         this->add_octave(img, img_sigma, this->options.base_blur_sigma);
+	if (this->options.debug_output_han){
+	    std::cout << "Pre-blurring image to target_sigma " << this->options.base_blur_sigma << " (has_sigma "
+        	<< img_sigma << ", blur = " << this->options.base_blur_sigma - img_sigma << ")..." << std::endl;
+	}
 
         core::FloatImage::ConstPtr pre_base = octaves[octaves.size()-1].img[0];
         img = core::image::rescale_half_size_gaussian<float>(pre_base);
@@ -222,8 +238,8 @@ Sift::add_octave (core::FloatImage::ConstPtr image,
      * we need to blur with sigma = sqrt(target_sigma^2 - has_sigma^2).
      */
     float sigma = std::sqrt(MATH_POW2(target_sigma) - MATH_POW2(has_sigma));
-    //std::cout << "Pre-blurring image to sigma " << target_sigma << " (has "
-    //    << has_sigma << ", blur = " << sigma << ")..." << std::endl;
+    //std::cout << "Pre-blurring image to target_sigma " << target_sigma << " (has_sigma "
+        //<< has_sigma << ", blur = " << sigma << ")..." << std::endl;
     core::FloatImage::Ptr base = (target_sigma > has_sigma
         ? core::image::blur_gaussian<float>(image, sigma)
         : image->duplicate());

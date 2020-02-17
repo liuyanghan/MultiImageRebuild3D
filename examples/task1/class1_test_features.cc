@@ -58,6 +58,7 @@ main (int argc, char** argv)
         features::Sift::Options sift_options;
         sift_options.verbose_output = true;
         sift_options.debug_output = true;
+	sift_options.debug_output_han = (argv[2] == NULL ? false : true);
         features::Sift sift(sift_options);
         sift.set_image(image);
 
