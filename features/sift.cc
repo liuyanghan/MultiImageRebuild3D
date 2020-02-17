@@ -15,6 +15,7 @@
 #include "math/functions.h"
 #include "math/matrix.h"
 #include "math/matrix_tools.h"
+#include "core/image.h"
 #include "core/image_io.h"
 #include "core/image_tools.h"
 #include "features/sift.h"
@@ -34,6 +35,21 @@ Sift::Sift (Options const& options)
 
     if (this->options.debug_output)
         this->options.verbose_output = true;
+}
+
+
+#define SAVE_OCTAVES() {\
+	core::ByteImage::ConstPtr byteImg;\
+	std::string sift_out_fname;\
+	for (int i = 0; i < this->octaves.size(); i++)\
+	{\
+		for (int j = 0; j < this->options.num_samples_per_octave + 3; ++j){\
+			byteImg = core::image::float_to_byte_image(this->octaves[i].img[j]);\
+			sift_out_fname = "../../../tmp/"+std::to_string(i)+std::to_string(j)+".png";\
+			core::image::save_file(byteImg, sift_out_fname);\
+		}\
+	}\
+	std::cout << "save octaves success !!!\n";\
 }
 
 /* ---------------------------------------------------------------- */
@@ -58,13 +74,8 @@ Sift::process (void)
     timer.reset();
     this->create_octaves();
 
-    if (this->options.debug_output_han){
-	for (int i = 0; i < this->octaves.size(); i++){
-		int a = this->octaves[i].img[0]->width();
-		int b = this->octaves[i].img[0]->height();
-		std::cout << "width: " << a << "    |   hight: " << b << std::endl;
-	}
-     }
+    if (this->options.debug_output_han)
+	SAVE_OCTAVES();
 
     if (this->options.debug_output)
     {
@@ -215,8 +226,12 @@ Sift::create_octaves (void)
         //std::cout << "Creating octave " << i << "..." << std::endl;
         this->add_octave(img, img_sigma, this->options.base_blur_sigma);
 	if (this->options.debug_output_han){
-	    std::cout << "Pre-blurring image to target_sigma " << this->options.base_blur_sigma << " (has_sigma "
-        	<< img_sigma << ", blur = " << this->options.base_blur_sigma - img_sigma << ")..." << std::endl;
+	    std::cout << 
+	    "width(" << img->width()<< 
+	    ")   hight(" << img->height() << ")   "<< 
+	    "Pre-blurring image to target_sigma " << this->options.base_blur_sigma << 
+	    " (has_sigma "<< img_sigma << 
+	    ", blur = " << this->options.base_blur_sigma - img_sigma << ")... " << std::endl;
 	}
 
         core::FloatImage::ConstPtr pre_base = octaves[octaves.size()-1].img[0];
