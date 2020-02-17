@@ -4,6 +4,7 @@
 
 # Runtime 缓存文件
 build
+tmp
 Api/Runtime
 Cron/Runtime
 
