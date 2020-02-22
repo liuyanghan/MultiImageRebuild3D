@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -rdynamic CMakeFiles/task1_test_matching.dir/class1_test_matching.o CMakeFiles/task1_test_matching.dir/visualizer.o  -o task1_test_matching  -lsfm -lutil -lcore -lfeatures 

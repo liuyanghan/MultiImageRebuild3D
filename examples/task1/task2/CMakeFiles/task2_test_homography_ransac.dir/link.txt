@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -rdynamic CMakeFiles/task2_test_homography_ransac.dir/class2_test_fundamental_ransac.o CMakeFiles/task2_test_homography_ransac.dir/visualizer.o  -o task2_test_homography_ransac  -lsfm -lutil -lcore -lfeatures 

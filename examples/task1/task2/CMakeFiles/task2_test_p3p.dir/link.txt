@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -rdynamic CMakeFiles/task2_test_p3p.dir/class2_test_p3p.o  -o task2_test_p3p  -lsfm -lutil -lcore -lfeatures 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -rdynamic CMakeFiles/task1_test_features.dir/class1_test_features.o CMakeFiles/task1_test_features.dir/visualizer.o  -o task1_test_features  -lutil -lcore -lfeatures 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -rdynamic CMakeFiles/task2_test_ba.dir/class2_test_bundle_adjustment.o  -o task2_test_ba  -lsfm -lutil -lcore -lfeatures 

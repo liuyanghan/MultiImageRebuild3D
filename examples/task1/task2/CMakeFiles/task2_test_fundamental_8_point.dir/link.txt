@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -rdynamic CMakeFiles/task2_test_fundamental_8_point.dir/class2_test_fundamental_8_point.o CMakeFiles/task2_test_fundamental_8_point.dir/visualizer.o  -o task2_test_fundamental_8_point  -lsfm -lutil -lcore -lfeatures 
