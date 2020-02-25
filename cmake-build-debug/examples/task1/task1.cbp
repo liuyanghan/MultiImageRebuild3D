@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="task1"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\core\;CMake Files\util\;CMake Files\features\;CMake Files\sfm\;CMake Files\examples\;CMake Files\examples\task1\;CMake Files\examples\task2\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task1_test_features">
+				<Option output="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/task1_test_features" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/hly/workspace/MultiImageRebuild3D/examples/task1/../.."/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 task1_test_features"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task1_test_features/fast">
+				<Option output="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/task1_test_features" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/hly/workspace/MultiImageRebuild3D/examples/task1/../.."/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 task1_test_features/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task1_test_matching">
+				<Option output="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/task1_test_matching" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/hly/workspace/MultiImageRebuild3D/examples/task1/../.."/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 task1_test_matching"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="task1_test_matching/fast">
+				<Option output="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/task1_test_matching" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/hly/workspace/MultiImageRebuild3D/examples/task1/../.."/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 task1_test_matching/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/examples/task1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/examples/task1/class1_test_features.cc">
+			<Option target="task1_test_features"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/examples/task1/class1_test_matching.cc">
+			<Option target="task1_test_matching"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/examples/task1/visualizer.cc">
+			<Option target="task1_test_features"/>
+			<Option target="task1_test_matching"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/examples/task1/visualizer.h">
+			<Option target="task1_test_features"/>
+			<Option target="task1_test_matching"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\core\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/util/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\util\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/features/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\features\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/sfm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\sfm\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/examples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/examples/task1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\task1\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/examples/task2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\task2\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

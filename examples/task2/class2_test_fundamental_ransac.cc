@@ -7,215 +7,267 @@
  * of the BSD 3-Clause license. See the LICENSE.txt file for details.
  */
 
+
 #include <iostream>
-
-#include "util/aligned_memory.h"
-#include "core/image.h"
-#include "core/image_io.h"
-#include "core/image_tools.h"
-#include "features/sift.h"
-#include "features/matching.h"
+#include <fstream>
+#include <sstream>
+#include <set>
+#include <util/system.h>
+#include <sfm/ransac_fundamental.h>
+#include <assert.h>
+#include "math/functions.h"
+#include "sfm/fundamental.h"
 #include "sfm/correspondence.h"
-#include "sfm/ransac_fundamental.h"
-#include "sfm/ransac_homography.h"
-#include "sfm/feature_set.h"
-#include "visualizer.h"
+#include "math/matrix_svd.h"
 
-#define MAX_PIXELS 1000000
+typedef math::Matrix<double, 3, 3> FundamentalMatrix;
 
-void
-normalize_correspondences (sfm::Correspondences2D2D * corr, int width1, int height1,
-    int width2, int height2)
-{
-    float const img1_width = static_cast<float>(width1);
-    float const img1_height = static_cast<float>(height1);
-    float const img1_maxdim = static_cast<float>(std::max(width1, height1));
-    float const img2_width = static_cast<float>(width2);
-    float const img2_height = static_cast<float>(height2);
-    float const img2_maxdim = static_cast<float>(std::max(width2, height2));
-    for (std::size_t i = 0; i < corr->size(); ++i)
-    {
-        sfm::Correspondence2D2D & c = corr->at(i);
-        c.p1[0] = (c.p1[0] + 0.5f - img1_width / 2.0f) / img1_maxdim;
-        c.p1[1] = (c.p1[1] + 0.5f - img1_height / 2.0f) / img1_maxdim;
-        c.p2[0] = (c.p2[0] + 0.5f - img2_width / 2.0f) / img2_maxdim;
-        c.p2[1] = (c.p2[1] + 0.5f - img2_height / 2.0f) / img2_maxdim;
-    }
-}
 
-void
-denormalize_correspondences (sfm::Correspondences2D2D * corr, int width1, int height1,
-    int width2, int height2)
-{
-    float const img1_width = static_cast<float>(width1);
-    float const img1_height = static_cast<float>(height1);
-    float const img1_maxdim = static_cast<float>(std::max(width1, height1));
-    float const img2_width = static_cast<float>(width2);
-    float const img2_height = static_cast<float>(height2);
-    float const img2_maxdim = static_cast<float>(std::max(width2, height2));
-    for (std::size_t i = 0; i < corr->size(); ++i)
-    {
-        sfm::Correspondence2D2D & c = corr->at(i);
-        c.p1[0] = c.p1[0] * img1_maxdim + img1_width / 2.0f - 0.5f;
-        c.p1[1] = c.p1[1] * img1_maxdim + img1_height / 2.0f - 0.5f;
-        c.p2[0] = c.p2[0] * img2_maxdim + img2_width / 2.0f - 0.5f;
-        c.p2[1] = c.p2[1] * img2_maxdim + img2_height / 2.0f - 0.5f;
-    }
-}
+/**
+ * \description 用于RANSAC采样成功所需要的采样次数
+ * @param p -- 内点的概率
+ * @param K --拟合模型需要的样本个数，对应基础矩阵num_samples=8
+ * @param z  -- 预期的采样成功的概率
+ *                          log(1-z)
+ *       需要的采样次数 M = -----------
+ *                          log(1-p^K)
+ * Example: For p = 50%, z = 99%, n = 8: M = log(0.001) / log(0.99609) = 1176.
+ * 需要采样1176次从而保证RANSAC的成功率不低于0.99.
+ * @return
+ */
+int  calc_ransac_iterations (double p,
+                           int K,
+                           double z = 0.99){
 
-void convert_sift_discriptors(features::Sift::Descriptors const&sift_descrs,
-                            util::AlignedMemory<math::Vec128f, 16> *aligned_descr)
-{
-    aligned_descr->resize(sift_descrs.size());
-    float * data_ptr=aligned_descr->data()->begin();
-    for(int i=0; i<sift_descrs.size(); ++i, data_ptr+=128)
-    {
-        features::Sift::Descriptor const& descr = sift_descrs[i];
-        std::copy(descr.data.begin(), descr.data.end(), data_ptr);
-    }
+
+    double num_iterations = 0.0;
+    /* 计算迭代次数*/
+    return static_cast<int>(math::round(num_iterations));
 
 }
 
-features::Matching::Result feature_matching(features::Sift::Descriptors const&sift_discrs1
-                    , features::Sift::Descriptors const &sift_discrs2)
-{
-    // 进行数据转换
-    util::AlignedMemory<math::Vec128f, 16> aligned_descrs1, aligned_descrs2;
-    convert_sift_discriptors(sift_discrs1, &aligned_descrs1);
-    convert_sift_discriptors(sift_discrs2, &aligned_descrs2);
+/**
+ * \description 给定基础矩阵和一对匹配点，计算匹配点的sampson 距离，用于判断匹配点是否是内点,
+ * 计算公式如下：
+ *              SD = (x'Fx)^2 / ( (Fx)_1^2 + (Fx)_2^2 + (x'F)_1^2 + (x'F)_2^2 )
+ * @param F-- 基础矩阵
+ * @param m-- 匹配对
+ * @return
+ */
+double  calc_sampson_distance (FundamentalMatrix const& F, sfm::Correspondence2D2D const& m) {
 
+    double p2_F_p1 = 0.0;
+    p2_F_p1 += m.p2[0] * (m.p1[0] * F[0] + m.p1[1] * F[1] + F[2]);
+    p2_F_p1 += m.p2[1] * (m.p1[0] * F[3] + m.p1[1] * F[4] + F[5]);
+    p2_F_p1 +=     1.0 * (m.p1[0] * F[6] + m.p1[1] * F[7] + F[8]);
+    p2_F_p1 *= p2_F_p1;
 
-    features::Matching::Options matching_opts;
-    matching_opts.descriptor_length = 128;
-    matching_opts.distance_threshold = 1.0f;
-    matching_opts.lowe_ratio_threshold = 0.8f;
+    double sum = 0.0;
+    sum += math::fastpow(m.p1[0] * F[0] + m.p1[1] * F[1] + F[2], 2);
+    sum += math::fastpow(m.p1[0] * F[3] + m.p1[1] * F[4] + F[5], 2);
+    sum += math::fastpow(m.p2[0] * F[0] + m.p2[1] * F[3] + F[6], 2);
+    sum += math::fastpow(m.p2[0] * F[1] + m.p2[1] * F[4] + F[7], 2);
 
-    features::Matching::Result matching_result;
-    features::Matching::twoway_match(matching_opts, aligned_descrs1.data()->begin(), sift_discrs1.size()
-                                                    ,aligned_descrs2.data()->begin(), sift_discrs2.size(),&matching_result);
+    return p2_F_p1 / sum;
+}
+/**
+ * \description 8点发估计相机基础矩阵
+ * @param pset1 -- 第一个视角的特征点
+ * @param pset2 -- 第二个视角的特征点
+ * @return 估计的基础矩阵
+ */
+void calc_fundamental_8_point (math::Matrix<double, 3, 8> const& pset1
+        , math::Matrix<double, 3, 8> const& pset2
+        ,FundamentalMatrix &F
+){
+    /* direct linear transform */
+    math::Matrix<double, 8, 9> A;
+    for(int i=0; i<8; i++)
+    {
+        math::Vec3d p1  = pset1.col(i);
+        math::Vec3d p2 = pset2.col(i);
 
-    features::Matching::remove_inconsistent_matches(&matching_result);
+        A(i, 0) = p1[0]*p2[0];
+        A(i, 1) = p1[1]*p2[0];
+        A(i, 2) = p2[0];
+        A(i, 3) = p1[0]*p2[1];
+        A(i, 4) = p1[1]*p2[1];
+        A(i, 5) = p2[1];
+        A(i, 6) = p1[0];
+        A(i, 7) = p1[1];
+        A(i, 8) = 1.0;
+    }
 
-    return matching_result;
+    math::Matrix<double, 9, 9> vv;
+    math::matrix_svd<double, 8, 9>(A, nullptr, nullptr, &vv);
+    math::Vector<double, 9> f = vv.col(8);
+
+    F(0,0) = f[0]; F(0,1) = f[1]; F(0,2) = f[2];
+    F(1,0) = f[3]; F(1,1) = f[4]; F(1,2) = f[5];
+    F(2,0) = f[6]; F(2,1) = f[7]; F(2,2) = f[8];
+
+    /* singularity constraint */
+    math::Matrix<double, 3, 3> U, S, V;
+    math::matrix_svd(F, &U, &S, &V);
+    S(2,2)=0;
+    F = U*S*V.transpose();
+}
+
+/**
+ * \description 利用最小二乘法计算基础矩阵
+ * @param matches--输入的匹配对 大于8对
+ * @param F --基础矩阵
+ */
+void calc_fundamental_least_squares(sfm::Correspondences2D2D const & matches, FundamentalMatrix&F){
+
+    if (matches.size() < 8)
+        throw std::invalid_argument("At least 8 points required");
+    /* Create Nx9 matrix A. Each correspondence creates on row in A. */
+    std::vector<double> A(matches.size() * 9);
+    for (std::size_t i = 0; i < matches.size(); ++i)
+    {
+        sfm::Correspondence2D2D const& p = matches[i];
+        A[i * 9 + 0] = p.p2[0] * p.p1[0];
+        A[i * 9 + 1] = p.p2[0] * p.p1[1];
+        A[i * 9 + 2] = p.p2[0] * 1.0;
+        A[i * 9 + 3] = p.p2[1] * p.p1[0];
+        A[i * 9 + 4] = p.p2[1] * p.p1[1];
+        A[i * 9 + 5] = p.p2[1] * 1.0;
+        A[i * 9 + 6] = 1.0     * p.p1[0];
+        A[i * 9 + 7] = 1.0     * p.p1[1];
+        A[i * 9 + 8] = 1.0     * 1.0;
+    }
+
+    /* Compute fundamental matrix using SVD. */
+    std::vector<double> vv(9 * 9);
+    math::matrix_svd<double>(&A[0], matches.size(), 9, nullptr, nullptr, &vv[0]);
+
+    /* Use last column of V as solution. */
+    for (int i = 0; i < 9; ++i)
+        F[i] = vv[i * 9 + 8];
+
+    /* singularity constraint */
+    math::Matrix<double, 3, 3> U, S, V;
+    math::matrix_svd(F, &U, &S, &V);
+    S(2,2)=0;
+    F = U*S*V.transpose();
+}
+/**
+ * \description 给定匹配对和基础矩阵，计算内点的个数
+ * @param matches
+ * @param F
+ * @return
+ */
+std::vector<int> find_inliers(sfm::Correspondences2D2D const & matches
+    ,FundamentalMatrix const & F, const double & thresh){
+    const double squared_thresh = thresh* thresh;
+
+    std::vector<int> inliers;
+    /*todo 判断内点，并将内点索引保存到inliers中*/
+    return inliers;
 }
 
 
 
-int
-main (int argc, char** argv)
-{
-    if (argc != 3)
-    {
-        std::cerr << "Syntax: " << argv[0] << " <img1> <img2>" << std::endl;
-        return 1;
-    }
+int main(int argc, char *argv[]){
 
-    /* 加载图像. */
-    std::string fname1(argv[1]);
-    std::string fname2(argv[2]);
-    std::cout << "Loading " << fname1 << "..." << std::endl;
-    core::ByteImage::Ptr img1 = core::image::load_file(fname1);
-    std::cout << "Loading " << fname2 << "..." << std::endl;
-    core::ByteImage::Ptr img2 = core::image::load_file(fname2);
-    // 控制图像尺寸
-    while(img1->get_pixel_amount() > MAX_PIXELS){
-        img1=core::image::rescale_half_size<uint8_t>(img1);
-    }
-    while(img2->get_pixel_amount() > MAX_PIXELS){
-        img2=core::image::rescale_half_size<uint8_t>(img2);
-    }
-
-
-    /*计算sift特征点 */
-    sfm::FeatureSet::Options feature_set_opts;
-    feature_set_opts.feature_types = sfm::FeatureSet::FEATURE_SIFT;
-    feature_set_opts.sift_opts.verbose_output = true;
-
-    sfm::FeatureSet feat1(feature_set_opts);
-    feat1.compute_features(img1);
-
-    sfm::FeatureSet feat2(feature_set_opts);
-    feat2.compute_features(img2);
-
-    std::cout << "Image 1 (" << img1->width() << "x" << img1->height() << ") "
-              << feat1.sift_descriptors.size() << " descriptors." << std::endl;
-    std::cout << "Image 2 (" << img2->width() << "x" << img2->height() << ") "
-              << feat2.sift_descriptors.size() << " descriptors." << std::endl;
-
-
-    /*特征匹配*/
-    features::Matching::Result mathing_result = feature_matching(feat1.sift_descriptors, feat2.sift_descriptors);
-    int n_consitent_matches = features::Matching::count_consistent_matches(mathing_result);
-    std::cout << "Consistent Sift Matches: "
-              << n_consitent_matches
-              << std::endl;
-
-
+    /** 加载归一化后的匹配对 */
     sfm::Correspondences2D2D corr_all;
-    std::vector<int> const & m12 = mathing_result.matches_1_2;
-    for(int i=0; i<m12.size(); i++)
-    {
-        if(m12[i]<0)continue;
+    std::ifstream in("./examples/task2/correspondences.txt");
+    assert(in.is_open());
 
-        sfm::Correspondence2D2D c2d2d;
+    std::string line, word;
+    int n_line = 0;
+    while(getline(in, line)){
 
-        c2d2d.p1[0] = feat1.positions[i][0];
-        c2d2d.p1[1] = feat1.positions[i][1];
-        c2d2d.p2[0] = feat2.positions[m12[i]][0];
-        c2d2d.p2[1] = feat2.positions[m12[i]][1];
+        std::stringstream stream(line);
+        if(n_line==0){
+            int n_corrs = 0;
+            stream>> n_corrs;
+            corr_all.resize(n_corrs);
 
-        corr_all.push_back(c2d2d);
+            n_line ++;
+            continue;
+        }
+        if(n_line>0){
+
+            stream>>corr_all[n_line-1].p1[0]>>corr_all[n_line-1].p1[1]
+                  >>corr_all[n_line-1].p2[0]>>corr_all[n_line-1].p2[1];
+        }
+        n_line++;
     }
 
-    normalize_correspondences(&corr_all, img1->width(), img1->height(),
-                                img2->width(), img1->height());
+    /* 计算采用次数 */
+    const float inlier_ratio =0.5;
+    const int n_samples=8;
+    int n_iterations = calc_ransac_iterations(inlier_ratio, n_samples);
 
+    // 用于判读匹配对是否为内点
+    const double inlier_thresh = 0.0015;
 
-    /* RANSAC 估计本征矩阵, 并对特征匹配对进行筛选*/
-    sfm::RansacFundamental::Options ransac_fundamental_opts;
-    ransac_fundamental_opts.max_iterations =1000;
-    ransac_fundamental_opts.verbose_output = true;
-    sfm::RansacFundamental ransac_fundamental(ransac_fundamental_opts);
-    sfm::RansacFundamental::Result ransac_fundamental_result;
-    ransac_fundamental.estimate(corr_all, &ransac_fundamental_result);
-    // 根据估计的Fundamental矩阵对特征匹配对进行筛选
+    // ransac 最终估计的内点
+    std::vector<int> best_inliers;
+
+    std::cout << "RANSAC-F: Running for " << n_iterations
+              << " iterations, threshold " << inlier_thresh
+              << "..." << std::endl;
+    for(int i=0; i<n_iterations; i++){
+
+        /* 1.0 随机找到8对不重复的匹配点 */
+        std::set<int> indices;
+        while(indices.size()<8){
+            indices.insert(util::system::rand_int() % corr_all.size());
+        }
+
+        math::Matrix<double, 3, 8> pset1, pset2;
+        std::set<int>::const_iterator iter = indices.cbegin();
+        for(int j=0; j<8; j++, iter++){
+            sfm::Correspondence2D2D const & match = corr_all[*iter];
+
+            pset1(0, j) = match.p1[0];
+            pset1(1, j) = match.p1[1];
+            pset1(2, j) = 1.0;
+
+            pset2(0, j) = match.p2[0];
+            pset2(1, j) = match.p2[1];
+            pset2(2, j) = 1.0;
+        }
+
+        /*2.0 8点法估计相机基础矩阵*/
+        FundamentalMatrix F;
+        calc_fundamental_8_point(pset1, pset2,F);
+
+        /*3.0 统计所有的内点个数*/
+        std::vector<int> inlier_indices = find_inliers(corr_all, F, inlier_thresh);
+
+        if(inlier_indices.size()> best_inliers.size()){
+
+//            std::cout << "RANSAC-F: Iteration " << i
+//                      << ", inliers " << inlier_indices.size() << " ("
+//                      << (100.0 * inlier_indices.size() / corr_all.size())
+//                      << "%)" << std::endl;
+            best_inliers.swap(inlier_indices);
+        }
+    }
+
     sfm::Correspondences2D2D corr_f;
-    for(int i=0; i<ransac_fundamental_result.inliers.size(); ++i)
-    {
-        int inlier_id = ransac_fundamental_result.inliers[i];
-        corr_f.push_back(corr_all[inlier_id]);
+    for(int i=0; i< best_inliers.size(); i++){
+        corr_f.push_back(corr_all[best_inliers[i]]);
     }
 
-    /* RANSAC 估计单应矩阵, 并对特征匹配对进行筛选*/
-    sfm::RansacHomography::Options ransac_homography_opts;
-    ransac_homography_opts.verbose_output=true;
-    ransac_homography_opts.max_iterations=1000;
-    sfm::RansacHomography ransac_homography(ransac_homography_opts);
-    sfm::RansacHomography::Result ransac_homograph_result;
-    ransac_homography.estimate(corr_all, &ransac_homograph_result);
-    // 根据估计的homography对匹配对进行筛选
-    sfm::Correspondences2D2D corr_h;
-    for(int i=0; i<ransac_homograph_result.inliers.size(); ++i)
-    {
-        int inlier_id = ransac_homograph_result.inliers[i];
-        corr_h.push_back(corr_all[inlier_id]);
-    }
+    /*利用所有的内点进行最小二乘估计*/
+    FundamentalMatrix F;
+    calc_fundamental_least_squares(corr_f, F);
 
+    std::cout<<"inlier number: "<< best_inliers.size()<<std::endl;
+    std::cout<<"F\n: "<< F<<std::endl;
 
-    /* 匹配特征可视化. */
-    denormalize_correspondences(&corr_all, img1->width(), img1->height(),
-                                img2->width(), img2->height());
-    denormalize_correspondences(&corr_f, img1->width(), img1->height(),
-                                img2->width(), img2->height());
-    denormalize_correspondences(&corr_h, img1->width(), img1->height(),
-                                img2->width(), img2->height());
-    core::ByteImage::Ptr vis_img;
-    vis_img = features::Visualizer::draw_matches(img1, img2, corr_all);
-    core::image::save_png_file(vis_img, "./tmp/matches_unfiltered.png");
-    vis_img = features::Visualizer::draw_matches(img1, img2, corr_f);
-    core::image::save_png_file(vis_img, "./tmp/matches_fundamental.png");
-    vis_img = features::Visualizer::draw_matches(img1, img2, corr_h);
-    core::image::save_png_file(vis_img, "./tmp/matches_homography.png");
+    std::cout<<"result should be: \n"
+             <<"inliner number: 272\n"
+             <<"F: \n"
+             <<"-0.00961384 -0.0309071 0.703297\n"
+             <<"0.0448265 -0.00158655 -0.0555796\n"
+             <<"-0.703477 0.0648517 -0.0117791\n";
 
     return 0;
 }

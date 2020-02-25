@@ -1,0 +1,7 @@
+/home/hly/software/clion-2019.3.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/hly/workspace/MultiImageRebuild3D
+PNG found: /usr/lib/x86_64-linux-gnu/libpng.so;/usr/lib/x86_64-linux-gnu/libz.so
+JPEG found: /usr/lib/x86_64-linux-gnu/libjpeg.so
+TIFF found: /usr/lib/x86_64-linux-gnu/libtiff.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/hly/workspace/MultiImageRebuild3D/cmake-build-debug

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfeatures.a  CMakeFiles/features.dir/sift.cc.o CMakeFiles/features.dir/surf.cc.o CMakeFiles/features.dir/nearest_neighbor.cc.o CMakeFiles/features.dir/matching.cc.o CMakeFiles/features.dir/exhaustive_matching.cc.o
+/usr/bin/ranlib libfeatures.a

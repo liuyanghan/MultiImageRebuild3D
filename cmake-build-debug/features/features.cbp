@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="features"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\core\;CMake Files\util\;CMake Files\features\;CMake Files\sfm\;CMake Files\examples\;CMake Files\examples\task1\;CMake Files\examples\task2\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/features"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/features/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/features/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/features/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/features/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="features">
+				<Option output="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/features/libfeatures.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/features"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/hly/workspace/MultiImageRebuild3D/features/.."/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/features/Makefile&quot;  VERBOSE=1 features"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/features/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/features/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/features/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="features/fast">
+				<Option output="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/features/libfeatures.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/features"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/hly/workspace/MultiImageRebuild3D/features/.."/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/features/Makefile&quot;  VERBOSE=1 features/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/features/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/features/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/features/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/features/exhaustive_matching.cc">
+			<Option target="features"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/features/exhaustive_matching.h">
+			<Option target="features"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/features/matching.cc">
+			<Option target="features"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/features/matching.h">
+			<Option target="features"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/features/matching_base.h">
+			<Option target="features"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/features/nearest_neighbor.cc">
+			<Option target="features"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/features/nearest_neighbor.h">
+			<Option target="features"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/features/sift.cc">
+			<Option target="features"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/features/sift.h">
+			<Option target="features"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/features/surf.cc">
+			<Option target="features"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/features/surf.h">
+			<Option target="features"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\core\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/util/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\util\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/features/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\features\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/sfm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\sfm\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/examples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/examples/task1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\task1\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/examples/task2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\task2\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

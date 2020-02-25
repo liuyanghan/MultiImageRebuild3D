@@ -88,7 +88,7 @@ main (int argc, char** argv)
     }
 
     core::ByteImage::Ptr sift_image = features::Visualizer::draw_keypoints(image,
-        sift_drawing, features::Visualizer::SMALL_DOT_STATIC);
+        sift_drawing, features::Visualizer::RADIUS_CIRCLE_ORIENTATION);
 
     /* 保存图像文件名 */
 	//std::cout << "Number of feature point: " << sift_descr.size() << std::endl;

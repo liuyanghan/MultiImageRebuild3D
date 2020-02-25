@@ -1,54 +1,44 @@
-project(task2)
+project(class22)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "-fPIC")
 
 include_directories("../..")
 
-set(VISUAL_HEADER visualizer.h)
-set(VISUAL_SOURCE visualizer.cc)
 
 #test math basic
 set(MATH_BASIC_FILE
-        task2_test_math_basic.cc
+        class2_test_math_basic.cc
         )
 add_executable(task2_test_math_basic ${MATH_BASIC_FILE} )
 target_link_libraries(task2_test_math_basic  util core )
 
 
-# test homography
-set(HOMOGRAPHY_FILE
-        class2_test_fundamental_ransac.cc)
-add_executable(task2_test_homography_ransac ${HOMOGRAPHY_FILE} ${VISUAL_HEADER} ${VISUAL_SOURCE})
-target_link_libraries(task2_test_homography_ransac sfm util core features )
+# test camera model
+set(CAMERA_MODEL
+        class2_test_camera.cc
+        )
 
-# test homography
-set(HOMOGRAPHY_FILE
+add_executable(task2_test_camera_model ${CAMERA_MODEL}  )
+target_link_libraries(task2_test_camera_model util core features )
+
+
+# test fundamental 8 point
+set(FUNDAMENTAL_8_POINT_FILE
         class2_test_fundamental_8_point.cc)
-add_executable(task2_test_fundamental_8_point ${HOMOGRAPHY_FILE} ${VISUAL_HEADER} ${VISUAL_SOURCE})
+add_executable(task2_test_fundamental_8_point ${FUNDAMENTAL_8_POINT_FILE} )
 target_link_libraries(task2_test_fundamental_8_point sfm util core features )
 
 
-set(TRIANGLE_FILE
-        class2_test_triangle.cc)
-add_executable(task2_test_triangle ${TRIANGLE_FILE})
-target_link_libraries(task2_test_triangle sfm util core)
+
+# test fundamental ransac
+set(FUNDAMENTAL_RANSAC_FILE
+        class2_test_fundamental_ransac.cc)
+add_executable(task2_test_fundamental_ransac ${FUNDAMENTAL_RANSAC_FILE})
+target_link_libraries(task2_test_fundamental_ransac sfm util core features )
 
 
-set(JACOBIAN_FILE class2_test_jacobian.cc)
-add_executable(task2_test_jacobian ${JACOBIAN_FILE})
-target_link_libraries(task2_test_jacobian sfm util core)
-
-set(P3P_FILE
-        class2_test_p3p.cc)
-add_executable(task2_test_p3p ${P3P_FILE})
-target_link_libraries(task2_test_p3p sfm util core features)
-
-# test bundle adjustment
-set(BA_FILES
-        class2_test_bundle_adjustment.cc)
-add_executable(task2_test_ba ${BA_FILES})
-target_link_libraries(task2_test_ba sfm util core features)
-
-
-
-
+set(POSE_FROM_FUNDAMENTAL
+        calss2_test_pose_from_fundamental.cc
+        )
+add_executable(task2_test_pose_from_fundamental ${POSE_FROM_FUNDAMENTAL} )
+target_link_libraries(task2_test_pose_from_fundamental sfm util core features )

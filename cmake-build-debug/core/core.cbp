@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="core"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\core\;CMake Files\util\;CMake Files\features\;CMake Files\sfm\;CMake Files\examples\;CMake Files\examples\task1\;CMake Files\examples\task2\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/core"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/core/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/core/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/core/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/core/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="core">
+				<Option output="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/core/libcore.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/core"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/hly/workspace/MultiImageRebuild3D/core/.."/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/core/Makefile&quot;  VERBOSE=1 core"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/core/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/core/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/core/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="core/fast">
+				<Option output="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/core/libcore.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/core"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/hly/workspace/MultiImageRebuild3D/core/.."/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/core/Makefile&quot;  VERBOSE=1 core/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/core/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/core/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hly/workspace/MultiImageRebuild3D/cmake-build-debug/core/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/bundle.cc">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/bundle.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/bundle_io.cc">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/bundle_io.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/camera.cc">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/camera.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/defines.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/image.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/image_base.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/image_color.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/image_drawing.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/image_exif.cc">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/image_exif.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/image_io.cc">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/image_io.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/image_tools.cc">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/image_tools.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/scene.cc">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/scene.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/view.cc">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/view.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/core/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\core\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/util/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\util\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/features/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\features\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/sfm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\sfm\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/examples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/examples/task1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\task1\"/>
+		</Unit>
+		<Unit filename="/home/hly/workspace/MultiImageRebuild3D/examples/task2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\task2\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

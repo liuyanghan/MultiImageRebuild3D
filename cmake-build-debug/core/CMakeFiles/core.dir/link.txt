@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcore.a  CMakeFiles/core.dir/bundle.cc.o CMakeFiles/core.dir/bundle_io.cc.o CMakeFiles/core.dir/camera.cc.o CMakeFiles/core.dir/image_exif.cc.o CMakeFiles/core.dir/image_io.cc.o CMakeFiles/core.dir/image_tools.cc.o CMakeFiles/core.dir/scene.cc.o CMakeFiles/core.dir/view.cc.o
+/usr/bin/ranlib libcore.a
