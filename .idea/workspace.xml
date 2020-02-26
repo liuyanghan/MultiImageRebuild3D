@@ -2,17 +2,17 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="ImageBasedModellingEdu" targetName="features" />
-      <config projectName="ImageBasedModellingEdu" targetName="util" />
       <config projectName="ImageBasedModellingEdu" targetName="sfm" />
-      <config projectName="ImageBasedModellingEdu" targetName="task2_test_pose_from_fundamental" />
-      <config projectName="ImageBasedModellingEdu" targetName="task2_test_camera_model" />
+      <config projectName="ImageBasedModellingEdu" targetName="task1_test_features" />
       <config projectName="ImageBasedModellingEdu" targetName="task2_test_fundamental_ransac" />
       <config projectName="ImageBasedModellingEdu" targetName="task2_test_math_basic" />
-      <config projectName="ImageBasedModellingEdu" targetName="task1_test_features" />
-      <config projectName="ImageBasedModellingEdu" targetName="task1_test_matching" />
+      <config projectName="ImageBasedModellingEdu" targetName="features" />
+      <config projectName="ImageBasedModellingEdu" targetName="task2_test_pose_from_fundamental" />
       <config projectName="ImageBasedModellingEdu" targetName="task2_test_fundamental_8_point" />
+      <config projectName="ImageBasedModellingEdu" targetName="task2_test_camera_model" />
       <config projectName="ImageBasedModellingEdu" targetName="core" />
+      <config projectName="ImageBasedModellingEdu" targetName="util" />
+      <config projectName="ImageBasedModellingEdu" targetName="task1_test_matching" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -22,19 +22,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2676baa4-d72c-4f51-b2a8-305149c9dd01" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/task1/class1_test_features.cc" beforeDir="false" afterPath="$PROJECT_DIR$/examples/task1/class1_test_features.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/task2/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/task2/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/task2/class2_test_bundle_adjustment.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/task2/class2_test_fundamental_8_point.cc" beforeDir="false" afterPath="$PROJECT_DIR$/examples/task2/class2_test_fundamental_8_point.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/task2/class2_test_fundamental_ransac.cc" beforeDir="false" afterPath="$PROJECT_DIR$/examples/task2/class2_test_fundamental_ransac.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/task2/class2_test_jacobian.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/task2/class2_test_p3p.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/task2/class2_test_triangle.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/task2/task2_test_math_basic.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/task2/visualizer.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/task2/visualizer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/examples/task1/CMakeFiles/task1_test_features.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/examples/task1/CMakeFiles/task1_test_features.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/examples/task1/CMakeFiles/task1_test_matching.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/examples/task1/CMakeFiles/task1_test_matching.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/examples/task1/CMakeFiles/task1_test_matching.dir/class1_test_matching.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/examples/task1/CMakeFiles/task1_test_matching.dir/class1_test_matching.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/examples/task1/task1_test_features" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/examples/task1/task1_test_features" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/examples/task1/task1_test_matching" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/examples/task1/task1_test_matching" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/features/CMakeFiles/features.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/features/CMakeFiles/features.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/features/CMakeFiles/features.dir/sift.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/features/CMakeFiles/features.dir/sift.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/features/libfeatures.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/features/libfeatures.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sfm/CMakeFiles/sfm.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sfm/CMakeFiles/sfm.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/task1/class1_test_matching.cc" beforeDir="false" afterPath="$PROJECT_DIR$/examples/task1/class1_test_matching.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/sift.cc" beforeDir="false" afterPath="$PROJECT_DIR$/features/sift.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/sift.h" beforeDir="false" afterPath="$PROJECT_DIR$/features/sift.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,9 +72,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="CMake Application.task2_test_math_basic">
+  <component name="RunManager" selected="CMake Application.task1_test_matching">
     <configuration name="features" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="features" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -180,7 +180,8 @@
       <workItem from="1535792373399" duration="1056000" />
       <workItem from="1535793591622" duration="113000" />
       <workItem from="1582464706312" duration="2753000" />
-      <workItem from="1582467559708" duration="9186000" />
+      <workItem from="1582467559708" duration="15384000" />
+      <workItem from="1582654841514" duration="1438000" />
     </task>
     <task id="LOCAL-00001" summary="fist time">
       <created>1535793272571</created>
@@ -204,9 +205,10 @@
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
     <state x="592" y="200" key="#Scopes/65.24.1855.1056@65.24.1855.1056" timestamp="1582466494561" />
-    <state x="457" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582465444783">
-      <screen x="65" y="24" width="1855" height="1056" />
+    <state x="399" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582643492384">
+      <screen x="65" y="24" width="1851" height="883" />
     </state>
+    <state x="399" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/65.24.1851.883@65.24.1851.883" timestamp="1582643492384" />
     <state x="457" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/65.24.1855.1056@65.24.1855.1056" timestamp="1582465444783" />
     <state x="541" y="164" key="#features" timestamp="1582464901933">
       <screen x="65" y="24" width="1601" height="865" />
@@ -220,43 +222,69 @@
       <screen x="65" y="24" width="1601" height="865" />
     </state>
     <state x="165" y="96" width="1401" height="693" key="DiffContextDialog/65.24.1601.865@65.24.1601.865" timestamp="1582466930980" />
-    <state width="1549" height="213" key="GridCell.Tab.0.bottom" timestamp="1582555799324">
-      <screen x="65" y="24" width="1601" height="865" />
+    <state width="1799" height="144" key="GridCell.Tab.0.bottom" timestamp="1582728352785">
+      <screen x="65" y="24" width="1851" height="883" />
     </state>
     <state width="1549" height="213" key="GridCell.Tab.0.bottom/65.24.1601.865@65.24.1601.865" timestamp="1582555799324" />
+    <state width="1549" height="128" key="GridCell.Tab.0.bottom/65.24.1601.883@65.24.1601.883" timestamp="1582641553929" />
+    <state width="1799" height="144" key="GridCell.Tab.0.bottom/65.24.1851.883@65.24.1851.883" timestamp="1582728352785" />
     <state width="1803" height="316" key="GridCell.Tab.0.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1582553780219" />
-    <state width="1549" height="213" key="GridCell.Tab.0.center" timestamp="1582555799322">
-      <screen x="65" y="24" width="1601" height="865" />
+    <state width="1799" height="144" key="GridCell.Tab.0.center" timestamp="1582728352784">
+      <screen x="65" y="24" width="1851" height="883" />
     </state>
     <state width="1549" height="213" key="GridCell.Tab.0.center/65.24.1601.865@65.24.1601.865" timestamp="1582555799322" />
+    <state width="1549" height="128" key="GridCell.Tab.0.center/65.24.1601.883@65.24.1601.883" timestamp="1582641553927" />
+    <state width="1799" height="144" key="GridCell.Tab.0.center/65.24.1851.883@65.24.1851.883" timestamp="1582728352784" />
     <state width="1803" height="316" key="GridCell.Tab.0.center/65.24.1855.1056@65.24.1855.1056" timestamp="1582553780217" />
-    <state width="1549" height="213" key="GridCell.Tab.0.left" timestamp="1582555799321">
-      <screen x="65" y="24" width="1601" height="865" />
+    <state width="1799" height="144" key="GridCell.Tab.0.left" timestamp="1582728352783">
+      <screen x="65" y="24" width="1851" height="883" />
     </state>
     <state width="1549" height="213" key="GridCell.Tab.0.left/65.24.1601.865@65.24.1601.865" timestamp="1582555799321" />
+    <state width="1549" height="128" key="GridCell.Tab.0.left/65.24.1601.883@65.24.1601.883" timestamp="1582641553926" />
+    <state width="1799" height="144" key="GridCell.Tab.0.left/65.24.1851.883@65.24.1851.883" timestamp="1582728352783" />
     <state width="1803" height="316" key="GridCell.Tab.0.left/65.24.1855.1056@65.24.1855.1056" timestamp="1582553780216" />
-    <state width="1549" height="213" key="GridCell.Tab.0.right" timestamp="1582555799323">
-      <screen x="65" y="24" width="1601" height="865" />
+    <state width="1799" height="144" key="GridCell.Tab.0.right" timestamp="1582728352785">
+      <screen x="65" y="24" width="1851" height="883" />
     </state>
     <state width="1549" height="213" key="GridCell.Tab.0.right/65.24.1601.865@65.24.1601.865" timestamp="1582555799323" />
+    <state width="1549" height="128" key="GridCell.Tab.0.right/65.24.1601.883@65.24.1601.883" timestamp="1582641553928" />
+    <state width="1799" height="144" key="GridCell.Tab.0.right/65.24.1851.883@65.24.1851.883" timestamp="1582728352785" />
     <state width="1803" height="316" key="GridCell.Tab.0.right/65.24.1855.1056@65.24.1855.1056" timestamp="1582553780218" />
+    <state width="1799" height="236" key="GridCell.Tab.1.bottom" timestamp="1582642794885">
+      <screen x="65" y="24" width="1851" height="883" />
+    </state>
+    <state width="1799" height="236" key="GridCell.Tab.1.bottom/65.24.1851.883@65.24.1851.883" timestamp="1582642794885" />
+    <state width="1799" height="236" key="GridCell.Tab.1.center" timestamp="1582642794883">
+      <screen x="65" y="24" width="1851" height="883" />
+    </state>
+    <state width="1799" height="236" key="GridCell.Tab.1.center/65.24.1851.883@65.24.1851.883" timestamp="1582642794883" />
+    <state width="1799" height="236" key="GridCell.Tab.1.left" timestamp="1582642794882">
+      <screen x="65" y="24" width="1851" height="883" />
+    </state>
+    <state width="1799" height="236" key="GridCell.Tab.1.left/65.24.1851.883@65.24.1851.883" timestamp="1582642794882" />
+    <state width="1799" height="236" key="GridCell.Tab.1.right" timestamp="1582642794884">
+      <screen x="65" y="24" width="1851" height="883" />
+    </state>
+    <state width="1799" height="236" key="GridCell.Tab.1.right/65.24.1851.883@65.24.1851.883" timestamp="1582642794884" />
     <state x="632" y="207" key="RollbackChangesDialog" timestamp="1582555189873">
       <screen x="65" y="24" width="1601" height="865" />
     </state>
     <state x="632" y="207" key="RollbackChangesDialog/65.24.1601.865@65.24.1601.865" timestamp="1582555189873" />
     <state x="722" y="248" key="RollbackChangesDialog/65.24.1855.1056@65.24.1855.1056" timestamp="1582466294199" />
-    <state x="442" y="161" key="SettingsEditor" timestamp="1582555741191">
-      <screen x="65" y="24" width="1601" height="865" />
+    <state x="501" y="164" key="SettingsEditor" timestamp="1582728373410">
+      <screen x="65" y="24" width="1851" height="883" />
     </state>
     <state x="442" y="161" key="SettingsEditor/65.24.1601.865@65.24.1601.865" timestamp="1582555741191" />
+    <state x="501" y="164" key="SettingsEditor/65.24.1851.883@65.24.1851.883" timestamp="1582728373410" />
     <state x="165" y="169" width="1401" height="693" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1582554265837">
       <screen x="65" y="24" width="1601" height="865" />
     </state>
     <state x="165" y="169" width="1401" height="693" key="com.intellij.history.integration.ui.views.FileHistoryDialog/65.24.1601.865@65.24.1601.865" timestamp="1582554265837" />
-    <state x="539" y="280" key="com.intellij.ide.util.TipDialog" timestamp="1582467560761">
-      <screen x="65" y="24" width="1601" height="865" />
+    <state x="614" y="337" key="com.intellij.ide.util.TipDialog" timestamp="1582654842346">
+      <screen x="65" y="24" width="1855" height="1056" />
     </state>
     <state x="539" y="280" key="com.intellij.ide.util.TipDialog/65.24.1601.865@65.24.1601.865" timestamp="1582467560761" />
+    <state x="614" y="337" key="com.intellij.ide.util.TipDialog/65.24.1855.1056@65.24.1855.1056" timestamp="1582654842346" />
     <state x="345" y="182" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1582554274835">
       <screen x="65" y="24" width="1601" height="865" />
     </state>
@@ -273,11 +301,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/features/sift.cc</url>
-          <line>262</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/examples/task2/class2_test_fundamental_8_point.cc</url>
           <line>87</line>

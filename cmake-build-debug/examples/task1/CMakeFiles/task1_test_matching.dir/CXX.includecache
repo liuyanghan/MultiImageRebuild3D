@@ -36,16 +36,6 @@ util/strings.h
 core/defines.h
 ../core/core/defines.h
 
-../core/image_drawing.h
-algorithm
--
-cmath
--
-core/defines.h
-../core/core/defines.h
-core/image.h
-../core/core/image.h
-
 ../core/image_io.h
 string
 -
@@ -313,16 +303,6 @@ features/matching.h
 /home/hly/workspace/MultiImageRebuild3D/examples/task1/features/matching.h
 sfm/feature_set.h
 /home/hly/workspace/MultiImageRebuild3D/examples/task1/sfm/feature_set.h
-visualizer.h
-/home/hly/workspace/MultiImageRebuild3D/examples/task1/visualizer.h
-
-/home/hly/workspace/MultiImageRebuild3D/examples/task1/visualizer.cc
-stdexcept
--
-core/image_tools.h
-/home/hly/workspace/MultiImageRebuild3D/examples/task1/core/image_tools.h
-core/image_drawing.h
-/home/hly/workspace/MultiImageRebuild3D/examples/task1/core/image_drawing.h
 visualizer.h
 /home/hly/workspace/MultiImageRebuild3D/examples/task1/visualizer.h
 

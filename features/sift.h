@@ -111,7 +111,7 @@ public:
          * Produce even more messages on the console.
          */
         bool debug_output;
-	bool debug_output_han;
+	    bool debug_output_han;
     };
 
     /**

@@ -82,8 +82,9 @@ Sift::process (void)
     timer.reset();
     this->create_octaves();
 
-    if (this->options.debug_output_han)
-	SAVE_OCTAVES();
+    if (this->options.debug_output_han) {
+        SAVE_OCTAVES();
+    }
 
     if (this->options.debug_output)
     {
