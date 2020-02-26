@@ -23,18 +23,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2676baa4-d72c-4f51-b2a8-305149c9dd01" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/examples/task1/CMakeFiles/task1_test_features.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/examples/task1/CMakeFiles/task1_test_features.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/examples/task1/CMakeFiles/task1_test_matching.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/examples/task1/CMakeFiles/task1_test_matching.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/examples/task1/CMakeFiles/task1_test_matching.dir/class1_test_matching.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/examples/task1/CMakeFiles/task1_test_matching.dir/class1_test_matching.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/examples/task1/task1_test_features" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/examples/task1/task1_test_features" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/examples/task1/task1_test_matching" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/examples/task1/task1_test_matching" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/features/CMakeFiles/features.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/features/CMakeFiles/features.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/features/CMakeFiles/features.dir/sift.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/features/CMakeFiles/features.dir/sift.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/features/libfeatures.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/features/libfeatures.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sfm/CMakeFiles/sfm.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sfm/CMakeFiles/sfm.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/task1/class1_test_matching.cc" beforeDir="false" afterPath="$PROJECT_DIR$/examples/task1/class1_test_matching.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/sift.cc" beforeDir="false" afterPath="$PROJECT_DIR$/features/sift.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/sift.h" beforeDir="false" afterPath="$PROJECT_DIR$/features/sift.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/task1/class1_test_features.cc" beforeDir="false" afterPath="$PROJECT_DIR$/examples/task1/class1_test_features.cc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +170,7 @@
       <workItem from="1535793591622" duration="113000" />
       <workItem from="1582464706312" duration="2753000" />
       <workItem from="1582467559708" duration="15384000" />
-      <workItem from="1582654841514" duration="1438000" />
+      <workItem from="1582654841514" duration="3611000" />
     </task>
     <task id="LOCAL-00001" summary="fist time">
       <created>1535793272571</created>

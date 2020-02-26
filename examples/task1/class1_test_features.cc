@@ -28,6 +28,7 @@ sift_compare (features::Sift::Descriptor const& d1, features::Sift::Descriptor c
 int
 main (int argc, char** argv)
 {
+    //学习git
     if (argc < 2)
     {
         std::cerr << "Syntax: " << argv[0] << " <image>" << std::endl;
